@@ -1,5 +1,6 @@
 import GreatCursor from "@/Client/Main-page/GreatCursor";
 import "./globals.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 export const metadata = {
   title: "Create Next App",
