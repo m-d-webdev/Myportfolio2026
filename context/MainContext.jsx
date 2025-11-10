@@ -1,7 +1,6 @@
 "use client"
 import { useContext, createContext } from "react"
 const MainContextE = createContext();
-  
 
 const MainContext = ({ children }) => {
     const ManOnScoterDuration = 2.5;
