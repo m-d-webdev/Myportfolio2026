@@ -19,7 +19,7 @@ const ExternalLinks = () => {
         </div>
       </a>
 
-      <a href="" target="_blank" download={true}>
+      <a href="https://younitebucket.s3.eu-north-1.amazonaws.com/mustapha_iderkaoui_cv.pdf" target="_blank" download={true}>
         <div className="p-[4] flex items-center gap-1 text-xs font-medium rounded-md border-background/40 w-fit  border ">
           <ResumeIcon className="w-5 stroke-1 h-5" />
           Resume

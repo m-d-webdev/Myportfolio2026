@@ -6,15 +6,20 @@ import { Home, User } from "../icons";
 
 
 const Links = () => {
-    const [hash, setHash] = useState(window?.location.hash != "" ? window?.location.hash : "#home");
+    const [hash, setHash] = useState("#home");
+    useEffect(() => {
+        if (window && typeof (window) != "undefined") {
+            setHash(window.location.hash != "" ? window.location.hash : "#home");
+        }
+    }, [])
 
     const navLinks = [
         { name: "Home", link: "#home", icon: <i className={`w-5 bi  h-5 ${hash == "#home" ? "bi-house-fill" : "bi-house"}`} /> },
-        { name: "About", link: "#about",icon: <i className={`w-5 bi  h-5 ${hash == "#about" ? "bi-person-fill" : "bi-person"}`} /> },
-        { name: "Skills", link: "#skills",icon:<i className={`w-5 bi  h-5 ${hash == "#skills" ? "bi-lightbulb-fill" : "bi-lightbulb"}`} /> },
-        { name: "Projects", link: "#projects",icon:<i className={`w-5 bi  h-5 ${hash == "#projects" ? "bi-inboxes-fill" : "bi-inboxes"}`} /> },
-        { name: "Experience", link: "#experience",icon:<i className={`w-5 bi  h-5 ${hash == "#experience" ? "bi-briefcase-fill" : "bi-briefcase"}`} />  },
-        { name: "Contact", link: "#contact" ,icon:<i className={`w-5 bi  h-5 ${hash == "#contact" ? "bi-phone-vibrate-fill" : "bi-phone-vibrate"}`} /> },
+        { name: "About", link: "#about", icon: <i className={`w-5 bi  h-5 ${hash == "#about" ? "bi-person-fill" : "bi-person"}`} /> },
+        { name: "Skills", link: "#skills", icon: <i className={`w-5 bi  h-5 ${hash == "#skills" ? "bi-lightbulb-fill" : "bi-lightbulb"}`} /> },
+        { name: "Projects", link: "#projects", icon: <i className={`w-5 bi  h-5 ${hash == "#projects" ? "bi-inboxes-fill" : "bi-inboxes"}`} /> },
+        { name: "Experience", link: "#experience", icon: <i className={`w-5 bi  h-5 ${hash == "#experience" ? "bi-briefcase-fill" : "bi-briefcase"}`} /> },
+        { name: "Contact", link: "#contact", icon: <i className={`w-5 bi  h-5 ${hash == "#contact" ? "bi-phone-vibrate-fill" : "bi-phone-vibrate"}`} /> },
     ];
 
 
