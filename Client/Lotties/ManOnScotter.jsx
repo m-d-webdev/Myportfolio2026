@@ -10,7 +10,7 @@ const ManOnScotter = ({ width = 100, height = 100 }) => {
     return (
         <motion.div
             initial={{
-                x: -800
+                x: -600
             }}
             animate={{
                 x: 0

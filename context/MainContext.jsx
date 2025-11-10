@@ -4,7 +4,7 @@ const MainContextE = createContext();
 
 
 const MainContext = ({ children }) => {
-    const ManOnScoterDuration = 3.5;
+    const ManOnScoterDuration = 2.5;
     return (
         <MainContextE.Provider
             value={{
