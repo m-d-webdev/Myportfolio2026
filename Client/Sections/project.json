@@ -1,0 +1,73 @@
+[
+  {
+    "name": "Prompt Flow",
+    "subtitle": {
+      "en": "An AI-powered prompt generator that helps users create creative and efficient ideas for their projects and content.",
+      "fr": "Un générateur de prompts alimenté par l’IA qui aide les utilisateurs à créer des idées créatives et efficaces pour leurs projets et contenus.",
+      "ar": "مولد تعليمات يعتمد على الذكاء الاصطناعي يساعد المستخدمين على ابتكار أفكار إبداعية وفعالة لمشاريعهم ومحتواهم."
+    },
+    "image": "/media/globalProject/img5.png",
+    "link":"https://promt-flow.space",
+    "techs":["Next js " , "node js ", "mongodb"],
+    "gitlink":"https://github.com/m-d-webdev/PromptFlow"
+  },
+  
+   {
+    "name": "Younite",
+    "subtitle": {
+      "en": "A social media platform built to connect people, share ideas, and create meaningful digital communities.",
+      "fr": "Une plateforme de médias sociaux conçue pour connecter les gens, partager des idées et créer des communautés numériques dynamiques.",
+      "ar": "منصة تواصل اجتماعي تهدف إلى ربط الأشخاص، ومشاركة الأفكار، وبناء مجتمعات رقمية هادفة."
+    },
+    "image": "/media/globalProject/img6.png",
+    "link":"https://younite-sigma.vercel.app",
+    "techs":["React" , "node js ", "mongodb"],
+    "gitlink":"https://github.com/m-d-webdev/Younite"
+
+  },
+  {
+    "name": "Quick Cart",
+    "subtitle": {
+      "en": "A complete e-commerce website featuring product search, cart management, and a smooth checkout process.",
+      "fr": "Un site e-commerce complet avec recherche de produits, gestion du panier et processus de paiement fluide.",
+      "ar": "موقع تجارة إلكترونية متكامل يحتوي على بحث عن المنتجات، إدارة السلة، وعملية دفع سلسة."
+    },
+    "image": "/media/globalProject/img3.png",
+    "link":"https://cuik-cart.vercel.app/",
+    "techs":["React" , "Firebase"],
+    "gitlink":"https://github.com/m-d-webdev/QuickCart"
+
+  },
+   
+  {
+    "name": "Chate Mate",
+    "subtitle": {
+      "en": "An online chatting platform that connects friends and integrates AI to enhance conversations and user engagement.",
+      "fr": "Une plateforme de discussion en ligne qui connecte les amis et intègre l’IA pour améliorer les conversations et l’expérience utilisateur.",
+      "ar": "منصة دردشة عبر الإنترنت تربط الأصدقاء وتدمج الذكاء الاصطناعي لتحسين المحادثات وتجربة المستخدم."
+    },
+    "image": "/media/globalProject/img2.png",
+    "link":"https://chatemate.vercel.app/",
+    "techs":["Next" , "node js ", "mongodb"],
+    "gitlink":"https://github.com/m-d-webdev/ChateMate"
+
+
+  },
+  
+  {
+    "name": "Tamnt",
+    "subtitle": {
+      "en": "A website dedicated to selling natural honey, designed with a warm and organic aesthetic that reflects product authenticity.",
+      "fr": "Un site web dédié à la vente de miel naturel, conçu avec une esthétique chaleureuse et authentique reflétant la qualité du produit.",
+      "ar": "موقع مخصص لبيع العسل الطبيعي، بتصميم دافئ وأصيل يعكس جودة المنتج وصدقه."
+    },
+    "image": "/media/globalProject/img4.png",
+    "link":"https://tamnt.space",
+    "techs":["Next" ,  "mongodb"],
+    "gitlink":"https://github.com/m-d-webdev/IDAOUHONEY"
+  }
+ 
+  
+ 
+]
+
