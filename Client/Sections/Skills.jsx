@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 const Skills = () => {
   return (
     <div id="skills" className="min-h-[100vh]  p-10 flex  relative  gap-2 justify-center flex-col">
-      <LinesUnderSection        />
+      <LinesUnderSection />
 
       <h2 className="text-xl z-[2] font-semibold">Tech Skills</h2>
       <div className="flex  z-[2] flex-col w-full mt-5 items-center justify-center">
@@ -42,7 +42,7 @@ const Skills = () => {
           <a href="https://nextjs.org/" target="_blank" className="p-2  bg-foreground border border-background/20 rounded-xl flex items-center gap-4">
             <img
               style={{
-                filter: `drop-shadow(0 0 2px var(--background))`
+                filter: `drop-shadow(0 0 2px white)`
               }}
               className="w-[20]" src="/icons/next-js.svg" />
             <p className="opacity-80 font-medium text-sm">Next 16</p>
@@ -63,11 +63,11 @@ const Skills = () => {
       <div className="mt-8">
         <h2 className="opacity-70 text-sm">To powerful back-end technologies: </h2>
         <div className="grid grid-cols-5 gap-3  mt-4 px-4 w-full max-w-[700] items-center" >
-          <a href="https://expressjs.com/" target="_blank" className="p-2 bg-background w-full col-span-2 border border-background/20 rounded-xl flex items-center gap-4">
+          <a href="https://expressjs.com/" target="_blank" className="p-2 bg-white  w-full col-span-2 border border-background/20 rounded-xl flex items-center gap-4">
             <img
 
               className="h-[18] " src="/icons/express-109.svg" />
-            <p className="opacity-80 text-sm font-medium text-foreground">Express JS</p>
+            <p className="opacity-80 text-sm font-medium text-black">Express JS</p>
           </a>
 
           <a href="https://www.mongodb.com/" target="_blank" className="p-2  bg-foreground border border-background/20 rounded-xl flex items-center gap-1">

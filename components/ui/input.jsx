@@ -24,6 +24,7 @@ function Input({
         <input
           type={type}
           id={id}
+          name={id}
           placeholder={placeholder}
           data-slot="input"
           className={cn(

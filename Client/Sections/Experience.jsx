@@ -1,9 +1,16 @@
+import LinesUnderSection from "@/components/global/LinesUnderSection"
 
 const Experience = () => {
     return (
-        <div id="experience" className="min-h-[100vh] flex items-center justify-center">
-            <div className="flex flex-col w-full text-background/80 max-w-[700] gap-3 tracking-normal ">
-                <h1 className="font-semibold text-background  mb-5 text-xl">My experience</h1>
+        <div id="experience" className="min-h-[100vh] flex items-center justify-center relative">
+            <LinesUnderSection
+                xCount={25}
+                xPersent={4}
+                yCount={25}
+                yPersent={4}
+            />
+            <div className="flex relative flex-col w-full text-background/80 max-w-[700] gap-3 tracking-normal ">
+                <h1 className="font-semibold text-background    text-xl">My experiences</h1>
 
                 <p>
                     I’m an emerging developer full of energy and passion, constantly growing my skills and creativity. I enjoy building websites that look professional, advanced, and polished — inspired by some of the best designs on the web.

@@ -6,8 +6,8 @@ function Textarea({
   className,
   label = "",
   id = Math.random() * 123,
-  labelClassName="",
-  parentClassName="",
+  labelClassName = "",
+  parentClassName = "",
   ...props
 }) {
   return (
@@ -18,7 +18,7 @@ function Textarea({
         id={id}
         data-slot="textarea"
         className={cn(
-          "border-background/20 resize-none min-h-[150] mt-1 placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 flex field-sizing-content w-full rounded-md border bg-transparent px-3 py-2 text-base shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50",
+          "border-background/20 resize-none min-h-[150] mt-1 placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive  flex field-sizing-content w-full rounded-md border bg-transparent px-3 py-2 text-base shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50",
           className
         )}
         {...props} />

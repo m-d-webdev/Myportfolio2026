@@ -47,7 +47,7 @@ const Links = () => {
                         style={{
                             top: `${topVal}px`
                         }}
-                        className="w-full max-w-[200] opacity-40 duration-200 z-[0.5] border border-background/15 h-[35] bg-background/10 rounded-md absolute"></div>
+                        className="w-full ease-in-out max-w-[200] opacity-40 duration-200 z-[0.5] border border-background/15 h-[35] bg-background/10 rounded-md absolute"></div>
                 ) : null
             }
             {/* <LinesUnderSection  xCount={10} xPersent={10} yCount={10} yPersent={10} /> */}

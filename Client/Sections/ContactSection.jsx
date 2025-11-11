@@ -6,9 +6,67 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Send, User } from "lucide-react";
 import { Gmail, Instagramme, Linkedin, Whatsupp } from "../icons";
 import LinesUnderSection from "@/components/global/LinesUnderSection";
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import EmailSent from "@/components/global/EmailSent";
+import AskForLang from "@/components/global/AskForLang";
+
+const WEBSITELINK = process.env.NEXT_PUBLIC_WEBSITELINK;
 
 
 const ContactSection = () => {
+    const [data, setData] = useState({
+        name: "",
+        email: "",
+        text: ""
+    });
+    const [emailsent, setemailsent] = useState(false)
+    const [isLoading, setLoading] = useState(false)
+    const [lang, setlang] = useState("en")
+    const [AskedForPrefferdLang, setAskedForPrefferdLang] = useState(false)
+    const [AskorLangOpen, setAskorLangOpen] = useState(false)
+
+    const handleSubmitEmailText = async (lange) => {
+
+        setemailsent(false);
+
+        try {
+
+            const url = `${WEBSITELINK}/api/contact`;
+
+            setLoading(true)
+
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    ...data,
+                    lang: lange ? lange : lang,
+
+                }),
+            });
+            const res = await response.json();
+            if (res.done) {
+                setemailsent(true);
+                setData(pv => ({ ...pv, text: "" }));
+            } else {
+            }
+            setLoading(false)
+        } catch (error) {
+            console.log(error);
+            setLoading(false)
+        }
+    };
+    const handelClick = () => {
+        if (!AskedForPrefferdLang) {
+            setAskorLangOpen(true)
+        }
+        else {
+            handleSubmitEmailText();
+        }
+    }
     return (
         <div id="contact" className="min-h-[100vh] p-4 relative pb-20 flex flex-col  justify-center mt-20 items-center">
             <LinesUnderSection xCount={30} yCount={20} yPersent={8} xPersent={6} />
@@ -19,13 +77,33 @@ const ContactSection = () => {
                 <h1 className="font-semibold text-xl">Get in Touch </h1>
 
                 <div className="grid grid-cols-1 md:grid-cols-2  mt-8   gap-4 ">
-                    <Input icon={<User className="w-5 h-5 stroke-1" />} label="Full name" parentClassName="!md:w-full " placeholder="Enter your name ..." />
-                    <Input icon={<Mail className="w-5 h-5 stroke-1" />} label="Email" parentClassName="!md:w-full " placeholder="Enter your email ..." />
+                    <Input
+                        id="name"
+                        onChange={e => setData(pv => ({ ...pv, name: e.target.value }))}
+                        icon={<User className="w-5 h-5 stroke-1" />} label="Full name" parentClassName="!md:w-full " placeholder="Enter your name ..." />
+                    <Input
+                        id="email"
+                        onChange={e => setData(pv => ({ ...pv, email: e.target.value }))}
+                        icon={<Mail className="w-5 h-5 stroke-1" />} label="Email" parentClassName="!md:w-full " placeholder="Enter your email ..." />
                 </div>
-                <Textarea parentClassName="mt-4 " label="Message" className={"bg-foreground/80"} placeholder="Write your message here ... " />
-                <Button className={"w-full mt-2 border border-background/10 py-5"}>
-                    Submit
-                    <Send />
+                <Textarea
+                    value={data.text}
+                    onChange={e => setData(pv => ({ ...pv, text: e.target.value }))}
+
+                    parentClassName="mt-4 " label="Message" className={"bg-foreground"} placeholder="Write your message here ... " />
+                <Button
+                    onClick={handelClick}
+                    disabled={isLoading || data.email == "" || data.text == ""}
+                    className={"w-full mt-2  border  border-background/10 py-5"}>
+                    {
+                        isLoading
+                            ?
+                            "Sending ..."
+                            : <>
+                                Submit
+                                <Send />
+                            </>
+                    }
                 </Button>
             </div>
             <div className="w-full mt-10  max-w-[700]">
@@ -104,6 +182,23 @@ const ContactSection = () => {
 
                 </div>
             </div>
+            <AnimatePresence>
+
+                {
+                    emailsent &&
+                    <EmailSent onClose={() => setemailsent(false)} />
+                }
+
+                {
+                    AskorLangOpen &&
+                    <AskForLang onClose={lange => {
+                        setAskedForPrefferdLang(true);
+                        setlang(lange);
+                        setAskorLangOpen(false)
+                        handleSubmitEmailText(lange)
+                    }} />
+                }
+            </AnimatePresence>
         </div >
     )
 }

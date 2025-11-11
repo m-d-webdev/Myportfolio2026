@@ -4,8 +4,10 @@ import { useMainContext } from "@/context/MainContext";
 import ExternalLinks from "./ExternalLinks";
 import Links from "./links";
 import { motion } from "framer-motion"
+import { Button } from "@/components/ui/button";
+import { MoonStar, Sun } from "lucide-react";
 const IntroName = () => {
-    const { ManOnScoterDuration } = useMainContext()
+    const { ManOnScoterDuration, theme, settheme } = useMainContext()
 
     return (
         <motion.div
@@ -19,7 +21,7 @@ const IntroName = () => {
 
             transition={{
                 delay: ManOnScoterDuration,
-                duration:1.5
+                duration: 1.5
             }}
 
             className="px-15 h-full flex flex-col justify-evenly"
@@ -40,9 +42,25 @@ const IntroName = () => {
             </div>
 
             <Links />
-            <ExternalLinks />
+            <div className="flex gap-3 items-center">
 
-        </motion.div>
+                <ExternalLinks />
+                <div
+
+                    className="flex border bg-accent-foreground border-background/15  rounded-md  gap-1 p-[2] px-1   w-fit items-center justify-center">
+                    <button
+                        onClick={e => settheme("dark")}
+                        className={`p-[6] rounded-md cursor-pointer  ${theme == "dark" ? "border border-background/15 bg-foreground/50" : ""}`} >
+                        <Sun className="bi bi-brightness-high w-4 h-4"></Sun>
+                    </button>
+                    <button
+                        onClick={e => settheme("light")}
+                        className={`p-[6] rounded-md cursor-pointer  ${theme == "light" ? "border border-background/15 bg-foreground/50" : ""}`} >
+                        <MoonStar className="bi bi-moon-stars w-4 h-4"></MoonStar>
+                    </button>
+                </div>
+            </div>
+        </motion.div >
     )
 }
 

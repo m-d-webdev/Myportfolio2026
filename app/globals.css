@@ -53,7 +53,7 @@
 :root {
   --gray3: #f5f5f54a;
   --main-bg-color3: #FAFAFA;
-  --filter-color: #0000002b;
+  --filter-color: #ffffff2c;
   --radius: 0.625rem;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.141 0.005 285.823);
@@ -93,7 +93,7 @@
 
 .dark {
   --gray3: #2928288e;
-  --filter-color: #ffffff2c;
+  --filter-color: #0000002b;
   --main-bg-color3: #1A1A1A;
   --background: oklch(0.141 0.005 285.823);
   --foreground: oklch(0.985 0 0);
