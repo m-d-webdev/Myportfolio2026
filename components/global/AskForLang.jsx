@@ -1,5 +1,6 @@
 "use client"
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { useState } from "react"
 
 
@@ -34,16 +35,16 @@ const AskForLang = ({ onClose }) => {
                 </p>
             </div>
             <div className="grid mt-3 px-3 w-full grid-cols-3 gap-3">
-                <div onClick={()=>setlang("fr")} className={`flex flex-col p-2 border duration-300 cursor-pointer rounded-xl  justify-center items-center ${lang == "fr" ? "bg-background/5 border-background" : "border-background/15"}`}>
-                    <img src="/icons/france.png" className="w-[50]" alt="" />
+                <div onClick={() => setlang("fr")} className={`flex flex-col p-2 border duration-300 cursor-pointer rounded-xl  justify-center items-center ${lang == "fr" ? "bg-background/5 border-background" : "border-background/15"}`}>
+                    <Image alt="flag-of-fr" src="/icons/france.png" width={50} height={50} className="object-cover" />
                     <p className="mt-1 font-medium tracking-normal">Français</p>
                 </div>
-                <div onClick={()=>setlang("en")} className={`flex flex-col p-2 border duration-300 cursor-pointer rounded-xl  justify-center items-center ${lang == "en" ? "bg-background/5 border-background" : "border-background/15"}`}>
-                    <img src="/icons/map.png" className="w-[50]" alt="" />
+                <div onClick={() => setlang("en")} className={`flex flex-col p-2 border duration-300 cursor-pointer rounded-xl  justify-center items-center ${lang == "en" ? "bg-background/5 border-background" : "border-background/15"}`}>
+                    <Image alt="flag-of-rn" src="/icons/map.png" width={50} height={50} className="object-cover" />
                     <p className="mt-1 font-medium tracking-normal">English</p>
                 </div>
-                <div onClick={()=>setlang("ar")} className={`flex flex-col p-2 border duration-300 cursor-pointer rounded-xl  justify-center items-center ${lang == "ar" ? "bg-background/5 border-background" : "border-background/15"}`}>
-                    <img src="/icons/morocco.png" className="w-[50]" alt="" />
+                <div onClick={() => setlang("ar")} className={`flex flex-col p-2 border duration-300 cursor-pointer rounded-xl  justify-center items-center ${lang == "ar" ? "bg-background/5 border-background" : "border-background/15"}`}>
+                    <Image alt="flag-of-mar" src="/icons/morocco.png" width={50} height={50} className="object-cover" />
                     <p className="mt-1 font-medium tracking-normal">Arabic</p>
                 </div>
             </div>

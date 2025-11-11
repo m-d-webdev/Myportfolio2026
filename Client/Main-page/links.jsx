@@ -26,18 +26,16 @@ const Links = () => {
 
     const handelMouseDown = indx => {
         settopVal((indx * 35) + (indx * 8))
-        console.log((indx * 35) + (indx * 8))
-
     }
 
     return (
         <div
-            className="flex    relative items-start justify-start flex-col gap-2 ">
+            className="  flex  md:w-full relative items-start justify-start flex-wrap md:flex-col md:flex-nowrap  gap-2 ">
             <div
                 style={{
                     top: `${navLinks.findIndex(i => i.link == hash) * 35 + (navLinks.findIndex(i => i.link == hash) * 8)}px`
                 }}
-                className="w-full max-w-[200] duration-400 ease-in-out z-[1] border border-background/15 h-[35] bg-background/10 rounded-md absolute">
+                className="w-full hidden md:block max-w-[200] duration-400 ease-in-out z-[1] border border-background/15 h-[35] bg-background/10 rounded-md absolute">
             </div>
 
             {
@@ -47,7 +45,7 @@ const Links = () => {
                         style={{
                             top: `${topVal}px`
                         }}
-                        className="w-full ease-in-out max-w-[200] opacity-40 duration-200 z-[0.5] border border-background/15 h-[35] bg-background/10 rounded-md absolute"></div>
+                        className="w-full hidden md:block ease-in-out max-w-[200] opacity-40 duration-200 z-[0.5] border border-background/15 h-[35] bg-background/10 rounded-md absolute"></div>
                 ) : null
             }
             {/* <LinesUnderSection  xCount={10} xPersent={10} yCount={10} yPersent={10} /> */}
@@ -59,7 +57,7 @@ const Links = () => {
                         key={l.name}
                         href={l.link}
                         onMouseEnter={() => handelMouseDown(i)}
-                        className={`z-[2] flex items-center gap-2 duration-200  border rounded-md  w-full max-w-[200] h-[35] px-2 border-transparent  
+                        className={`z-[2] flex items-center gap-2 duration-200  border rounded-md  w-full max-w-[150] md:max-w-[200] h-[35] px-2 border-transparent  
                         ${hash == l.link ? "opacity-100 font-medium  !fill-background !stroke-none" : ""}
                          linkC flex font-light opacity-70 items-center gap-1 group`}>
                         {React.isValidElement(l.icon) && l.icon}

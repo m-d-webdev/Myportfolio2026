@@ -24,7 +24,7 @@ const IntroName = () => {
                 duration: 1.5
             }}
 
-            className="px-15 h-full flex flex-col justify-evenly"
+            className="px-15 h-full flex items-center md:items-start  gap-5 md:gap-0  flex-col min-h-[60vh] md:min-h-0  justify-center md:justify-evenly"
         >
             <div className="">
 
