@@ -1,19 +1,13 @@
 "use client"
 
 import Link from "next/link"
-import React, { useEffect, useState } from "react";
-import { Home, User } from "../icons";
-import LinesUnderSection from "@/components/global/LinesUnderSection";
+import React, {  useState } from "react";
+import { useMainContext } from "@/context/MainContext";
 
 
 const Links = () => {
-    const [hash, setHash] = useState("#home");
     const [topVal, settopVal] = useState(null);
-    useEffect(() => {
-        if (window && typeof (window) != "undefined") {
-            setHash(window.location.hash != "" ? window.location.hash : "#home");
-        }
-    }, [])
+    const { hash } = useMainContext();
 
     const navLinks = [
         { name: "Home", link: "#home", icon: <i className={`w-5 bi duration-200  h-5 ${hash == "#home" ? "bi-house-fill" : "bi-house"}`} /> },
@@ -53,7 +47,7 @@ const Links = () => {
             {
                 navLinks.map((l, i) =>
                     <Link
-                        onClick={() => setHash(l.link)}
+                        // onClick={() => setHash(l.link)}
                         key={l.name}
                         href={l.link}
                         onMouseEnter={() => handelMouseDown(i)}

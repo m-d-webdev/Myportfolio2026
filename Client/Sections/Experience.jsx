@@ -1,15 +1,16 @@
+import ContaineObserver from "@/components/global/ContaineObserver"
 import LinesUnderSection from "@/components/global/LinesUnderSection"
 
 const Experience = () => {
     return (
-        <div id="experience" className="min-h-[100vh] flex items-center justify-center relative">
+        <ContaineObserver link={"#experience"} id="experience" className="min-h-[100vh] flex items-center justify-center relative">
             <LinesUnderSection
                 xCount={25}
                 xPersent={4}
                 yCount={25}
                 yPersent={4}
             />
-            <div className="flex relative flex-col w-full text-background/80 max-w-[700] px-5 gap-3 tracking-normal ">
+            <div className="flex  relative flex-col w-full text-background/80 max-w-[700] px-5 gap-3 tracking-normal ">
                 <h1 className="font-semibold text-background    text-xl">My experiences</h1>
 
                 <p>
@@ -30,7 +31,7 @@ const Experience = () => {
                 </p>
 
             </div>
-        </div>
+        </ContaineObserver>
     )
 }
 

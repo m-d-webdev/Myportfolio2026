@@ -50,7 +50,7 @@ const GreatCursor = ({ children, lang }) => {
             transition: "transform .1s"
           }}
 
-          className="absolute loader  z-[-2] "
+          className="absolute loader   z-[-2] "
         >
         </div>
 

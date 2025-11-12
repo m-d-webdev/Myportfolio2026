@@ -10,6 +10,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import EmailSent from "@/components/global/EmailSent";
 import AskForLang from "@/components/global/AskForLang";
+import ContaineObserver from "@/components/global/ContaineObserver";
 
 const WEBSITELINK = process.env.NEXT_PUBLIC_WEBSITELINK;
 
@@ -68,7 +69,7 @@ const ContactSection = () => {
         }
     }
     return (
-        <div id="contact" className="min-h-[100vh] p-4 relative pb-20 flex flex-col  justify-center mt-20 items-center">
+        <ContaineObserver link={"#contact"} id="contact" className="min-h-[100vh] p-4 relative  flex flex-col  justify-center mt-20 items-center">
             <LinesUnderSection xCount={30} yCount={20} yPersent={8} xPersent={6} />
 
 
@@ -119,7 +120,9 @@ const ContactSection = () => {
                                 <Gmail className="w-5" />
                                 <p className="opacity-70 text-sm font-light   ">Email Address</p>
                             </a>
-                            <Button className={"w-[30%] text-xs !py-1 h-auto !rounded-lg opacity-60 hover:opacity-100 cursor-pointer border border-background/10 ml-5"} size={"sm"}>Copy link</Button>
+                            <Button
+                                onClick={() => navigator.clipboard.writeText("iderkaoui.mustapha.dev@gmail.com")}
+                                className={"w-[30%] text-xs !py-1 h-auto !rounded-lg opacity-60 hover:opacity-100 cursor-pointer border border-background/10 ml-5"} size={"sm"}>Copy link</Button>
                         </div>
                         <a
                             target="_blank"
@@ -141,7 +144,12 @@ const ContactSection = () => {
                                 <Whatsupp className="w-5" />
                                 <p className="opacity-70 text-sm font-light   ">WhatsApp number</p>
                             </a>
-                            <Button className={"w-[30%] text-xs !py-1 h-auto !rounded-lg opacity-60 hover:opacity-100 cursor-pointer border border-background/10 ml-5"} size={"sm"}>Copy link</Button>
+                            <Button
+                                onClick={() => navigator.clipboard.writeText("+212 767 310 612")}
+                                className={"w-[30%] text-xs !py-1 h-auto !rounded-lg opacity-60 hover:opacity-100 cursor-pointer border border-background/10 ml-5"}
+                                size={"sm"}>
+                                Copy link
+                            </Button>
                         </div>
                         <a href="https://api.whatsapp.com/send/?phone=212767310612&text&type=phone_number&app_absent=0" target="_blank" className="   hover:underline hover:text-chart-2 font-medium tracking-normal">+212 767 310 612</a>
                     </div>
@@ -157,7 +165,9 @@ const ContactSection = () => {
                                 <Linkedin className="w-5" />
                                 <p className="opacity-70 text-sm font-light   ">Linkedin profile</p>
                             </a>
-                            <Button className={"w-[30%] text-xs !py-1 h-auto !rounded-lg opacity-60 hover:opacity-100 cursor-pointer border border-background/10 ml-5"} size={"sm"}>Copy link</Button>
+                            <Button
+                                onClick={() => navigator.clipboard.writeText("https://www.linkedin.com/in/mustapha-iderkaoui-2748ab31b/")}
+                                className={"w-[30%] text-xs !py-1 h-auto !rounded-lg opacity-60 hover:opacity-100 cursor-pointer border border-background/10 ml-5"} size={"sm"}>Copy link</Button>
                         </div>
                         <a href="https://www.linkedin.com/in/mustapha-iderkaoui-2748ab31b/" target="_blank" className="   hover:underline hover:text-chart-2 font-medium tracking-normal">Iderkaoui Mustapha</a>
                     </div>
@@ -173,7 +183,9 @@ const ContactSection = () => {
                                 <Instagramme className="w-5" />
                                 <p className="opacity-70 text-sm font-light   ">instagram page</p>
                             </a>
-                            <Button className={"w-[30%] text-xs !py-1 h-auto !rounded-lg opacity-60 hover:opacity-100 cursor-pointer border border-background/10 ml-5"} size={"sm"}>Copy link</Button>
+                            <Button
+                                onClick={() => navigator.clipboard.writeText("https://www.instagram.com/instaccount222/")}
+                                className={"w-[30%] text-xs !py-1 h-auto !rounded-lg opacity-60 hover:opacity-100 cursor-pointer border border-background/10 ml-5"} size={"sm"}>Copy link</Button>
                         </div>
                         <a href="https://www.instagram.com/instaccount222/" target="_blank" className="   hover:underline hover:text-chart-2 font-medium tracking-normal">Iderkaoui Mustapha</a>
                     </div>
@@ -199,7 +211,7 @@ const ContactSection = () => {
                     }} />
                 }
             </AnimatePresence>
-        </div >
+        </ContaineObserver >
     )
 }
 

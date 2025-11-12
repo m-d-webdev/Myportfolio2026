@@ -1,8 +1,9 @@
+import ContaineObserver from "@/components/global/ContaineObserver"
 import LinesUnderSection from "@/components/global/LinesUnderSection"
 
 const AboutMeSection = () => {
     return (
-        <div id="about" className=" w-full relative  min-h-[100vh] flex flex-col justify-center items-center">
+        <ContaineObserver key={"about"} link={"#about"} id="about" className=" w-full relative  min-h-[100vh] flex flex-col justify-center items-center">
             <LinesUnderSection
                 xCount={25}
                 xPersent={4}
@@ -23,7 +24,7 @@ const AboutMeSection = () => {
                     Beyond code, I’m driven by curiosity — always exploring new technologies, improving workflows, and sharing knowledge through my personal projects.
                 </p>
             </div>
-        </div >
+        </ContaineObserver >
     )
 }
 

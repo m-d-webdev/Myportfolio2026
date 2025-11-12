@@ -2,7 +2,7 @@
 
 const LinesUnderSection = ({ className, xPersent = 15, yPersent = 13, yCount = 8, xCount = 8 }) => {
     return (
-        <div className={`${className} absolute overflow-hidden z-[-1] w-full h-full top-0 left-0  `}>
+        <div className={`${className} absolute overflow-hidden z-[-5] w-full h-full top-0 left-0  `}>
             {
                 Array(yCount).fill().map((a, i) =>
                     <div

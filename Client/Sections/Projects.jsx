@@ -1,11 +1,11 @@
-"use client";
 
 import { Github, MoveRight, MoveUpRight } from "lucide-react";
 import ProjectJson from "./project.json";
+import ContaineObserver from "@/components/global/ContaineObserver";
 
 const Projects = () => {
     return (
-        <div id="projects" className="min-h-[100vh] items-center  mt-10 justify-center  p-10 flex flex-col ">
+        <ContaineObserver link={'#projects'} id="projects" className="min-h-[140vh] items-center  mt-10 justify-center  p-10 flex flex-col ">
             <h1 className="font-semibold w-full text-xl">Featured Projects</h1>
 
             <div className="flex w-full mt-6  flex-col gap-3">
@@ -46,7 +46,7 @@ const Projects = () => {
             </div>
 
         <a href="https://github.com/m-d-webdev?tab=repositories" target="_blank" className="w-full text-sm ml-8 flex gap-4 opacity-70 hover:opacity-100 group mt-6">View Full Project Archive <MoveRight className="group-hover:translate-x-4 duration-200" /></a>
-        </div>
+        </ContaineObserver>
     )
 }
 

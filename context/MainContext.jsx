@@ -5,6 +5,14 @@ const MainContextE = createContext();
 const MainContext = ({ children }) => {
     const ManOnScoterDuration = 2.5;
     const [theme, settheme] = useState("light");
+    const [hash, setHash] = useState("#home");
+
+    useEffect(() => {
+        if (window && typeof (window) != "undefined") {
+            setHash(window.location.hash != "" ? window.location.hash : "#home");
+        }
+    }, []);
+
     useEffect(() => {
         if (document && typeof (document) != "undefined") {
 
@@ -12,13 +20,17 @@ const MainContext = ({ children }) => {
                 ? document.documentElement.classList.add("dark")
                 : document.documentElement.classList.remove("dark")
         }
-    }, [theme])
+    }, [theme]);
+
+
     return (
         <MainContextE.Provider
             value={{
                 theme,
                 settheme,
-                ManOnScoterDuration
+                ManOnScoterDuration,
+                hash,
+                setHash
             }}
         >
             {children}
@@ -29,13 +41,17 @@ export const useMainContext = () => {
     const {
         theme,
         settheme,
-        ManOnScoterDuration
+        ManOnScoterDuration,
+        hash,
+        setHash
     }
         = useContext(MainContextE)
     return {
         theme,
         settheme,
-        ManOnScoterDuration
+        ManOnScoterDuration,
+        hash,
+        setHash
 
     }
 }

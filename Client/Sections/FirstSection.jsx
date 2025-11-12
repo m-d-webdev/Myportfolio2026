@@ -4,11 +4,13 @@ import { useMainContext } from "@/context/MainContext";
 import ManOnScotter from "../Lotties/ManOnScotter";
 import { motion } from "framer-motion"
 import LinesUnderSection from "@/components/global/LinesUnderSection";
+import ContaineObserver from "@/components/global/ContaineObserver";
 const FirstSection = () => {
+
   const { ManOnScoterDuration } = useMainContext()
 
   return (
-    <div id="home" className="min-h-[90vh]   flex flex-col justify-center  items-center relative p-6">
+    <ContaineObserver link={"#home"} id="home" className="min-h-[90vh]   flex flex-col justify-center  items-center relative p-6">
       <LinesUnderSection />
       <div className="relative max-w-[700] ">
 
@@ -29,10 +31,10 @@ const FirstSection = () => {
 
                 transition={{
                   delay: i * .1 + ManOnScoterDuration - 2,
-                  duration: 1.8,
+                  duration: 1.5,
                   repeat: Infinity,
                   repeatDelay: 10,
-                  ease: "easeInOut"
+                  ease: "linear"
                 }}
                 key={i}
                 className={`${i >= 31 ? "text-chart-1 " : ""} opacity-0`}
@@ -54,12 +56,11 @@ const FirstSection = () => {
                 }}
 
                 transition={{
-                  delay: i * .1 + ManOnScoterDuration + 3.7,
-                  duration: 1.8,
+                  delay: i * .1 + ManOnScoterDuration + 3,
+                  duration: 1.5,
                   repeat: Infinity,
-                  repeatDelay: 10
-                  ,
-                  ease: "easeInOut"
+                  repeatDelay: 10,
+                  ease: "linear"
                 }}
                 key={i}
                 className={`${i >= 33 ? "text-chart-1 " : ""} opacity-0`}
@@ -71,7 +72,7 @@ const FirstSection = () => {
 
         </h1>
       </div>
-    </div>
+    </ContaineObserver>
   )
 }
 

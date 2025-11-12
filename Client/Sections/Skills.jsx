@@ -1,9 +1,10 @@
 "use client";
+import ContaineObserver from "@/components/global/ContaineObserver";
 import LinesUnderSection from "@/components/global/LinesUnderSection";
 import { motion } from "framer-motion"
 const Skills = () => {
   return (
-    <div id="skills" className="min-h-[100vh]  p-10 flex  relative  gap-2 justify-center flex-col">
+    <ContaineObserver  link={"#skills"} id="skills" className="min-h-[100vh]  p-10 flex  relative  gap-2 justify-center flex-col">
       <LinesUnderSection />
 
       <h2 className="text-xl z-[2] font-semibold">Tech Skills</h2>
@@ -87,7 +88,7 @@ const Skills = () => {
       </div>
 
 
-    </div>
+    </ContaineObserver>
   )
 }
 
