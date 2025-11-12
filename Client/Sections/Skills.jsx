@@ -4,7 +4,7 @@ import LinesUnderSection from "@/components/global/LinesUnderSection";
 import { motion } from "framer-motion"
 const Skills = () => {
   return (
-    <ContaineObserver  link={"#skills"} id="skills" className="min-h-[100vh]  p-10 flex  relative  gap-2 justify-center flex-col">
+    <ContaineObserver link={"#skills"} id="skills" className="min-h-[100vh]  p-10 flex  relative  gap-2 justify-center flex-col">
       <LinesUnderSection />
 
       <h2 className="text-xl z-[2] font-semibold">Tech Skills</h2>
@@ -24,7 +24,7 @@ const Skills = () => {
             style={{
               filter: `drop-shadow(0 0 90px var(--color-yellow-200))`
             }}
-            className="absolute rounded-2xl top-0 bg-background  !z-[-1] w-full h-full">
+            className="absolute  hidden md:block rounded-2xl top-0 bg-background  !z-[-1] w-full h-full">
 
           </motion.div>
         </div>

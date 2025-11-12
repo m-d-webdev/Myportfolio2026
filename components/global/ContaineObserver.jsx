@@ -15,9 +15,10 @@ const ContaineObserver = ({ children, link, ...props }) => {
             threshold: 0.5,
         };
 
+        // let ti1;
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
+                if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
                     setHash(link);
                 }
             });

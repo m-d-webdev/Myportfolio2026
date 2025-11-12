@@ -1,6 +1,3 @@
-export const ResumeIcon = ({ ...props }) => {
-    return <img {...props} src="/icons/resume.png" />
-}
 export const Gmail = ({ ...props }) => {
     return <img {...props} src="/icons/gmail.png" />
 }
