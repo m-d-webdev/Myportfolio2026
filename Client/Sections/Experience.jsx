@@ -10,7 +10,7 @@ const Experience = () => {
                 yCount={25}
                 yPersent={4}
             />
-            <div className="flex  relative flex-col w-full text-background/80 max-w-[700] px-5 gap-3 tracking-normal ">
+            <div className="flex  relative flex-col w-full text-background/80 max-w-[700] md:px-5 px-1 gap-3 tracking-normal ">
                 <h1 className="font-semibold text-background    text-xl">My experiences</h1>
 
                 <p>

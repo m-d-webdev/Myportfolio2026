@@ -37,7 +37,8 @@ const Links = () => {
 
     return (
         <div
-            className="  flex  md:w-full relative items-start justify-start flex-wrap md:flex-col md:flex-nowrap  gap-2 ">
+            className="hidden  md:flex  md:w-full relative items-start justify-start md:flex-col md:flex-nowrap  gap-2 ">
+
             <div
                 style={{
                     top: `${navLinks.findIndex(i => i.link == hash2) * 35 + (navLinks.findIndex(i => i.link == hash2) * 8)}px`
@@ -55,12 +56,10 @@ const Links = () => {
                         className="w-full hidden md:block ease-in-out max-w-[200] opacity-40 duration-200 z-[0.5] border border-background/15 h-[35] bg-background/10 rounded-md absolute"></div>
                 ) : null
             }
-            {/* <LinesUnderSection  xCount={10} xPersent={10} yCount={10} yPersent={10} /> */}
 
             {
                 navLinks.map((l, i) =>
                     <Link
-                        // onClick={() => setHash(l.link)}
                         key={l.name}
                         href={l.link}
                         onMouseEnter={() => handelMouseDown(i)}

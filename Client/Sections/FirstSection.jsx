@@ -10,7 +10,7 @@ const FirstSection = () => {
   const { ManOnScoterDuration } = useMainContext()
 
   return (
-    <ContaineObserver link={"#home"} id="home" className="min-h-[90vh]   flex flex-col justify-center  items-center relative p-6">
+    <ContaineObserver link={"#home"} id="home" className="min-h-[90vh] hidden   md:flex flex-col justify-center  items-center relative p-6">
       <LinesUnderSection />
       <div className="relative max-w-[700] ">
 

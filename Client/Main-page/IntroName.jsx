@@ -24,7 +24,7 @@ const IntroName = () => {
                 duration: 1.5
             }}
 
-            className="px-15 h-full flex items-center md:items-start  gap-5 md:gap-0  flex-col min-h-[60vh] md:min-h-0  justify-center md:justify-evenly"
+            className="md:px-15 h-full flex items-center md:items-start  gap-5 md:gap-0  flex-col min-h-[50vh] md:min-h-0  justify-center md:justify-evenly"
         >
             <div className="">
 
@@ -42,7 +42,7 @@ const IntroName = () => {
             </div>
 
             <Links />
-            <div className="flex gap-3 items-center">
+            <div className="flex  mt-5 md:mt-0 gap-3 items-center">
 
                 <ExternalLinks />
                 <div

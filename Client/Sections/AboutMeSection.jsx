@@ -10,7 +10,7 @@ const AboutMeSection = () => {
                 yCount={25}
                 yPersent={4}
             />
-            <div className="max-w-[700]  px-5 flex flex-col gap-3">
+            <div className="max-w-[700]  md:px-5 px-1 flex flex-col gap-3">
 
                 <h2 className="font-semibold text-xl ">About </h2>
                 <p className="font-light  text-background/80 leading-[1.8] tracking-normal  ">
