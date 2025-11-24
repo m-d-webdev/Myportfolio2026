@@ -37,25 +37,31 @@ const Links = () => {
 
     return (
         <div
+            onMouseLeave={() => settopVal(null)}
             className="hidden  md:flex  md:w-full relative items-start justify-start md:flex-col md:flex-nowrap  gap-2 ">
 
             <div
                 style={{
                     top: `${navLinks.findIndex(i => i.link == hash2) * 35 + (navLinks.findIndex(i => i.link == hash2) * 8)}px`
                 }}
-                className="w-full hidden md:block max-w-[200] duration-400 ease-in-out z-[1] border border-background/15 h-[35] bg-background/10 rounded-md absolute">
+                className="w-full hidden md:block max-w-[200] duration-400 ease-in-out z-[1] border border-background/15 h-[35] bg-foreground rounded-md absolute">
             </div>
 
-            {
-                topVal >= 0 ? (
 
-                    <div
-                        style={{
-                            top: `${topVal}px`
-                        }}
-                        className="w-full hidden md:block ease-in-out max-w-[200] opacity-40 duration-200 z-[0.5] border border-background/15 h-[35] bg-background/10 rounded-md absolute"></div>
-                ) : null
-            }
+            {/* 
+            <div
+                style={{
+                    top: `${topVal}px`
+                }}
+                className="w-full hidden md:block ease-in-out max-w-[200] opacity-40 duration-200 z-[0.5] border border-background/15 h-[35] bg-background/10 rounded-md absolute"></div> */}
+
+            <div
+                style={{
+                    top: topVal != null ? `${topVal}px` : 0,
+                    height: topVal != null ? `35px` : "100%",
+                }}
+                className="w-full max-w-[200] hidden md:block    opacity-40 duration-200 z-[0.5] border border-background/30  bg-primary/70 rounded-md absolute"></div>
+
 
             {
                 navLinks.map((l, i) =>
@@ -63,7 +69,7 @@ const Links = () => {
                         key={l.name}
                         href={l.link}
                         onMouseEnter={() => handelMouseDown(i)}
-                        className={`z-[2] flex items-center gap-2 duration-200  border rounded-md  w-full max-w-[150] md:max-w-[200] h-[35] px-2 border-transparent  
+                        className={`z-[2] flex items-center gap-2 duration-200  border rounded-md  w-full max-w-[150] md:max-w-[200] h-[35] px-3 border-transparent  
                         ${hash2 == l.link ? "opacity-100 font-medium  !fill-background !stroke-none" : ""}
                          linkC flex font-light opacity-70 items-center gap-1 group`}>
                         {React.isValidElement(l.icon) && l.icon}
