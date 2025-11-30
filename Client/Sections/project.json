@@ -64,22 +64,8 @@
     "gitlink":"https://github.com/m-d-webdev/ChateMate"
 
 
-  },
-  
-  {
-    "name": "Tamnt",
-    "subtitle": {
-      "en": "A website dedicated to selling natural honey, designed with a warm and organic aesthetic that reflects product authenticity.",
-      "fr": "Un site web dédié à la vente de miel naturel, conçu avec une esthétique chaleureuse et authentique reflétant la qualité du produit.",
-      "ar": "موقع مخصص لبيع العسل الطبيعي، بتصميم دافئ وأصيل يعكس جودة المنتج وصدقه."
-    },
-    "image": "/media/globalProject/img4.png",
-    "link":"https://tamnt.space",
-    "techs":["Next" ,  "mongodb"],
-    "gitlink":"https://github.com/m-d-webdev/IDAOUHONEY"
   }
- 
   
- 
 ]
 
+ 
