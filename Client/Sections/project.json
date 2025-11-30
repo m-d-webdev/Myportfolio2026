@@ -1,5 +1,17 @@
 [
   {
+    "name": "Gadg It",
+    "subtitle": {
+      "en": "An online store offering the latest gadgets and tech products, making shopping fast, easy, and enjoyable.",
+      "fr": "Une boutique en ligne proposant les derniers gadgets et produits technologiques, rendant vos achats rapides, simples et agréables.",
+      "ar": "متجر إلكتروني يقدم أحدث الأدوات والمنتجات التكنولوجية، مما يجعل التسوق سريعًا وسهلاً وممتعًا."
+    },
+    "image": "/media/globalProject/img7.png",
+    "link":"https://gadg-it.vercel.app/",
+    "techs":["Next js " , "node js ", "mongodb"],
+    "gitlink":"https://github.com/m-d-webdev/tech-gadget-selling"
+  },
+  {
     "name": "Prompt Flow",
     "subtitle": {
       "en": "An AI-powered prompt generator that helps users create creative and efficient ideas for their projects and content.",
